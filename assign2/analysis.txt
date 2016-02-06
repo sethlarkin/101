@@ -1,0 +1,36 @@
+###
+analysis.txt
+CMPS101
+Programming assignment 2
+by:
+Shaun Musikanth (smusikan@ucsc.edu)
+and
+Seth Larkin (sslarkin@ucsc.edu)
+###
+
+
+Problem 1:
+    Our time complexity for matmult is Theta(n^2). The outer loop must iterate over each row, while
+    the inner loop must iterate over each column. If we were multiplying 2 "n x n" matrices instead,
+    the time complexity would be Theta(n^3).
+
+
+Problem 3:
+    Our efficient algorithm divides the hadamard matrix and vector in half until it reaches the base
+    case of "n = 2". Because we know the properties of hadamard matrices, for which 3 of the
+    quadrants are equivalent, and the fourth simply an inverse of the others, we utilize this to
+    reduce the amount of work done. In the case of our algorithm, by the Master theorem we have:
+        T(n) = 2T(n / 2) + Theta(n)
+        a = 2, b = 2, f(n) = Theta(n)
+
+        By Case 2:
+        f(n) = Theta(n^(log2(2))) = Theta(n^1) = Theta(n)
+        T(n) = Theta(n^(log2(2)) * logn) = Theta(n^1 * logn) = Theta(n * logn)
+
+    Our efficient algorithm which has Theta(n * logn) run time will be faster than the brute-force
+    algorithm with Theta(n^2).
+
+Problem 5:
+    The plot indicates that the recursive "hadmatmult" algorithm is much more efficient than the
+    brute-force "matmult" alternative. This assessment agrees with our time complexity analysis in
+    Problem 3.

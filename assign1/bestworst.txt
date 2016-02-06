@@ -1,0 +1,14 @@
+This is where we:
+
+Create a text file bestworst.txt in the repository.
+For a given size n, explain what the best and worst case input for Insertion
+sort and Merge sort looks like. Neatly type in your explanation into the
+text file and submit along with your code.
+
+1) Best & worst case input for insertion sort:
+	The worst input that can be given to an inserion sort algorithm, regarless of the size n of the array, is a reversed order array, that is that the first value of the array is the gratest of the array, ending in the smallest value. Better said, Array[1] >= Array[n-1] >= Array[n] will make the algorithm go through the entire array size, and swap all the values, taking it more time to sort as the length of the array increses. 
+
+	The best case input for the insertion sort algorithm, would be to insert an array which is already sorted, that is that the Array[1] <= Array[n-1] <= Array[n] because the algorithm would only have to check the values by comparing, with out the need of swaping them, because we said that the array is already sorted. 
+
+2) Best & worst case input for merge sort:
+	Given the theta notation of mergesort, we know that regardless of the input, the algorithm execution time will be the same, for both best case, when the array is already sorted, and for worst case when the array is in reversed order.

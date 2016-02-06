@@ -1,0 +1,15 @@
+## comments.txt ##
+
+Insertion sort:
+For the best case for insertion sort we submitted an in-order array, which took O(n) time. it ends up having to compare n elements but never having to swap.
+For the worst case we input a reverse sorted array, which the value to the left would have to be compared an swapped with every value to the right. his ran in O(n^2) time.
+
+Merge Sort:
+Given the avility and process of mergesort of devide and conquer, the best case and worst case run farely close together in regards to time as n increases to 1000. Also, it was a bit unclear as to what was the best and worse cases for merge sort, until discused with TA-Ryan which guided us in the right direction of insertinf the same worst and best case for insertion.
+
+### Average Cases ###
+Insertion:
+Insertion sort on average fell between best and worst case. This makes sense because the algrithm can live between n and n^2, the worst case and best case respectively. 
+
+Merge:
+Merge-sort behaved the same way in the average case as with the best and worst cases. Showing us that no matter what the data looked like, merge sort will take about the same time to complete.
