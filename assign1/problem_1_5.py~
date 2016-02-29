@@ -12,7 +12,7 @@ from problem_1_1 import insertionSort, MergeSort
 
 #Prepares Random array for insertion
 def makeRandomArrayInsertion():
-    b = np.zeros(10, dtype=float)
+    b = np.zeros(1000, dtype=float)
     for i in range(1, 10):
         np.random.seed(0)
         a = np.random.randint(10000, size=i)
@@ -24,7 +24,7 @@ def makeRandomArrayInsertion():
 
 #Gets average values of insertion
 def getAverageInsertion(a):
-    avgArray = np.zeros(10, dtype=float)
+    avgArray = np.zeros(1000, dtype=float)
     for j in range(0,10):
         np.random.seed(0)
         np.random.permutation(a)
@@ -35,7 +35,7 @@ def getAverageInsertion(a):
     
 #Prepares a random array for Merge
 def makeRandomArrayMerge():
-    b = np.zeros(10, dtype=float)
+    b = np.zeros(1000, dtype=float)
     for i in range(1, 10):
         np.random.seed(0)
         a = np.random.randint(10000, size=i)

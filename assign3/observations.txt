@@ -1,5 +1,29 @@
-vsvsdvds
+###
+observations.txt
+CMPS101 Winter 2016
 
-vd
-sV
-sdV
+Shaun Musikanth (smusikan@ucsc.edu)
+and
+Seth Larkin (sslarkin@ucsc.edu)
+###
+
+We observed mixed benefits from switching from an array to a heap based priority queue.
+
+A direct comparison of the time complexities of the priority queue functions follows.
+
+            Array     Heap
+get_next    O(n^2)    O(1)
+  delete    N/A       O(log n)
+  insert    O(1)      O(log n)
+
+As we can see, we drastically reduced the time to retrieve the next collision event in 'get_next'. In
+the array implementation we could overwrite values and as such did not require any 'delete' function.
+With the heap however we must perform this operation, though it only minimally increases the time of
+the simulation refresh. Our insert function became slightly slower.
+
+We observed visually that the heap implementation is much quicker to start the simulation. This may
+be attributed to the initialization of large arrays in the original implementation. The simulation
+overall becomes slower asymptotically with the heap, as the percentage and quantity of stale
+collisions grows in the data structure and results in a slower heapify procedure. Since we must
+always maintain the minimum heap property through the use of heapify, it does not appear to bring
+much benefit, if any.

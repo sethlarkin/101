@@ -1,0 +1,11 @@
+###
+observations.txt
+CMPS101 Winter 2016
+Programming Assignment 4
+
+Shaun Musikanth (smusikan@ucsc.edu)
+and
+Seth Larkin (sslarkin@ucsc.edu)
+###
+
+...

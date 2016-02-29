@@ -11,10 +11,9 @@ from scipy import linalg
 import unittest
 import os.path
 
-
 class MyTest(unittest.TestCase):
     def test(self):
-        nxn = [
+        nxn= [
             np.random.randint(-5,50,[2,2]),
             np.random.randint(-5,50,[4,4]),
             np.random.randint(-5,50,[8,8]),
@@ -24,7 +23,7 @@ class MyTest(unittest.TestCase):
             linalg.hadamard(2),
             linalg.hadamard(4),
             linalg.hadamard(8),
-            linalg.hadamard(16)
+            linalg.hadamard(16)                   
         ]
         vec = [
             np.random.randint(-5,50,[2]),
@@ -33,35 +32,36 @@ class MyTest(unittest.TestCase):
             np.random.randint(-5,50,[16])
         ]
         for t in range(4):
-            # Problem 1: matmult(A,x). Multiply a matrix with a vector.
+
+            #Problem 1: matmult(A,x). Multiply a matrix with a vector.
             nt.assert_equal(p2.matmult(nxn[t],vec[t]),nxn[t].dot(vec[t]))
 
-            # Problem 2: hadmat(k). Create hadamard of size 2^k
+            #Problem 2: hadmat(k). Create hadamard of size 2^k
             # calls student hadmat with t=1,2,3,4
-            # it is supposed to generate hadmat of size 2,4,8,16
+            # it is supposed to generate hadmat of size 2,4,8,16            
             nt.assert_equal(p2.hadmat(t+1),had[t])
-
-            # Problem 4: hadmatmult(H,x). Takes hadamard H and vector x, multiplies.
+            
+            #Problem 4: hadmatmult(H,x). Takes hadamart H and vector x, multiplies.              
             nt.assert_equal(p2.hadmatmult(had[t],vec[t]),had[t].dot(vec[t]))
-
-            # Bonus problem: efficienthadmatmult(x)
+            
+            #Bonus problem: efficienthadmatmult(x)
             #nt.assert_equal(p2.efficienthadmatmult(vec[t]),had[t].dot(vec[t]))
-
-
+            
 if __name__ == '__main__':
-    # Assignment 2 file checks
+
+    #Assignment 2 file checks
     filesok=True
     if not os.path.isfile("README"):
-        filesok=False
+        filesok=False        
         print("\nCANTFIND: README. If you have a readme file but still getting this error, check if it is upper case.\n")
     if not os.path.isfile("assign2.py"):
-        filesok=False
+        filesok=False        
         print("\nCANTFIND: assign2.py. Make sure you name the python file correctly.\n")
     if not os.path.isfile("matmulttime.pdf"):
-        filesok=False
+        filesok=False        
         print("\nCANTFIND: matmulttime.pdf. Did you forget to include PDF file with the graphs in it?\n")
     if not os.path.isfile("analysis.txt") and not os.path.isfile("analysis.pdf"):
-        filesok=False
+        filesok=False        
         print("\nCANTFIND: analysis.txt (or pdf).\n")
     if filesok:
         print("\nSeems like you have all your files placed correctly!\n")

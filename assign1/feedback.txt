@@ -1,0 +1,21 @@
+Problem1)-(0.5/1)
+
+1)Did you try running the code for different inputs? there seem to be some errors in some cases.
+2) Ask the TA if there are any specifications for naming the functions from the next assignment onwards
+
+Problem 2)-(1/1)
+1) correct reasoning, use Big O noatation to assert your answer as well.
+
+Problem3)-(1/1)
+
+1)Logic is right,and I had to make some changes to the import command, read up on how to use import.
+2)You have to return 4 arrays and give the best and worst case running times.
+
+Problem4)-(0.5/1)
+
+1)Did you try running the program, check your imports.
+2)There are too many errors and execution is getting aborted, you will not receive any credit from the next assignmnet as it will have to pass test scripts.
+
+Problem5)-(1/1)
+
+Code is right it's not getting executed though, you will receive only partial credit next time

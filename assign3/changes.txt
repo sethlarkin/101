@@ -1,0 +1,27 @@
+###
+changes.txt
+CMPS101 Winter 2016
+
+Shaun Musikanth (smusikan@ucsc.edu)
+and
+Seth Larkin (sslarkin@ucsc.edu)
+###
+
+The data structures of the array implementation are of a fixed size. Our heap however can
+grow unbounded. This becomes an obstacle to performance over time as we are dependent on
+continually maintaining the minimum heap property.
+
+Our heap priority queue class (ArrayPQ) uses a subclass (Collision_Heap) which implements
+the basic functions of a standard minimum heap. There is one difference however in that this
+expects a tuple to be supplied upon insertion, with the third element being used as the key
+for the heap. This data structure provides utility functions such as parent(), left(),
+right(), _swap(), _min_heapify(), pop(), minimum(), and insert().
+
+Our ArrayPQ class differs greatly from the original implementation. Instead of using
+separate arrays for each type of collision, we use a single minimum heap to store all
+predicted collisions. We create an empty minimum heap on initialization. Our insert() expects
+five arguments, which is essentially a wrapper of a function of the aforementioned subclass.
+We however take care to first check for time values of infinite and discard them because we
+know these collisions should not occur. Storing them would only server to bloat our minimum
+heap. Our delete() is a wrapper for the subclass's pop(). Our get_next() returns the five
+values contained in the root node's tuple.
